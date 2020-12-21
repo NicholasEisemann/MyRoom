@@ -11,3 +11,16 @@ C:\Users\Seven\OneDrive\Рабочий стол\C#_Project\MyRoom\MyRoom\obj\Deb
 C:\Users\Seven\OneDrive\Рабочий стол\C#_Project\MyRoom\MyRoom\obj\Debug\netcoreapp3.1\MyRoom.dll
 C:\Users\Seven\OneDrive\Рабочий стол\C#_Project\MyRoom\MyRoom\obj\Debug\netcoreapp3.1\MyRoom.pdb
 C:\Users\Seven\OneDrive\Рабочий стол\C#_Project\MyRoom\MyRoom\obj\Debug\netcoreapp3.1\MyRoom.genruntimeconfig.cache
+C:\Users\Seven\OneDrive\Рабочий стол\C#_Project\MyRoom\bin\Debug\netcoreapp3.1\MyRoom.exe
+C:\Users\Seven\OneDrive\Рабочий стол\C#_Project\MyRoom\bin\Debug\netcoreapp3.1\MyRoom.deps.json
+C:\Users\Seven\OneDrive\Рабочий стол\C#_Project\MyRoom\bin\Debug\netcoreapp3.1\MyRoom.runtimeconfig.json
+C:\Users\Seven\OneDrive\Рабочий стол\C#_Project\MyRoom\bin\Debug\netcoreapp3.1\MyRoom.runtimeconfig.dev.json
+C:\Users\Seven\OneDrive\Рабочий стол\C#_Project\MyRoom\bin\Debug\netcoreapp3.1\MyRoom.dll
+C:\Users\Seven\OneDrive\Рабочий стол\C#_Project\MyRoom\bin\Debug\netcoreapp3.1\MyRoom.pdb
+C:\Users\Seven\OneDrive\Рабочий стол\C#_Project\MyRoom\obj\Debug\netcoreapp3.1\MyRoom.csprojAssemblyReference.cache
+C:\Users\Seven\OneDrive\Рабочий стол\C#_Project\MyRoom\obj\Debug\netcoreapp3.1\MyRoom.AssemblyInfoInputs.cache
+C:\Users\Seven\OneDrive\Рабочий стол\C#_Project\MyRoom\obj\Debug\netcoreapp3.1\MyRoom.AssemblyInfo.cs
+C:\Users\Seven\OneDrive\Рабочий стол\C#_Project\MyRoom\obj\Debug\netcoreapp3.1\MyRoom.csproj.CoreCompileInputs.cache
+C:\Users\Seven\OneDrive\Рабочий стол\C#_Project\MyRoom\obj\Debug\netcoreapp3.1\MyRoom.dll
+C:\Users\Seven\OneDrive\Рабочий стол\C#_Project\MyRoom\obj\Debug\netcoreapp3.1\MyRoom.pdb
+C:\Users\Seven\OneDrive\Рабочий стол\C#_Project\MyRoom\obj\Debug\netcoreapp3.1\MyRoom.genruntimeconfig.cache
