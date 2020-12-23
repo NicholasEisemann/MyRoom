@@ -71,6 +71,7 @@ namespace MyRoom.Area
             double Windows = NumWindows * (WindowsDouble * HeightWindows);
             double Doors = NumDoors * (DoorsDouble * HeightDoors);
             double SRoomWD = (SRoom - Doors - Windows)/ 100;
+            SRoomWD = (double)Math.Round(SRoomWD, 2);
 
 
             Console.WriteLine($"Это площадь вашей квартиры - {SRoomWD} m^2");
