@@ -13,7 +13,7 @@ namespace MyRoom
             TheWallArea theWallArea = new TheWallArea();
             TheFloorAndCeiling theFloorAndCeiling = new TheFloorAndCeiling();
 
-            greetingClass.Greeting();
+            //greetingClass.Greeting();
 
             // Основной код русской программы
             Console.WriteLine("Какую площадь вы хотите высчитать?");
