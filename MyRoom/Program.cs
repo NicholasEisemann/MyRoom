@@ -1,5 +1,5 @@
 ﻿using System;
-using MyRoom.Area;
+using MyRoom.Area; 
 
 namespace MyRoom
 {
@@ -12,6 +12,7 @@ namespace MyRoom
             GreetingClass greetingClass = new GreetingClass();
             TheWallArea theWallArea = new TheWallArea();
             TheFloorAndCeiling theFloorAndCeiling = new TheFloorAndCeiling();
+            Rolls rolls = new Rolls();
 
             //greetingClass.Greeting();
 

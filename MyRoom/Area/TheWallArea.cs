@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.IO;
 
 namespace MyRoom.Area
 {
@@ -66,7 +67,20 @@ namespace MyRoom.Area
             string HeightDoor = Console.ReadLine();
             double HeightDoors = Convert.ToDouble(HeightDoor);
 
-          
+
+            string file = @"C:\Users\Seven\OneDrive\Рабочий стол\C#_Project\MyRoom\File\ConfWall.txt";
+
+            if (File.Exists(file)) //Проверка наличие файла
+            {
+                File.AppendAllText($"{file}", "Высота: " + Height + "\n");
+                File.AppendAllText($"{file}", "Длина первой стены: " + WallLength1 + "\n");
+                File.AppendAllText($"{file}", "Длина второй стены: " + WallLength2 + "\n");
+                File.AppendAllText($"{file}", "Длина третьей стены: " + WallLength3 + "\n");
+                File.AppendAllText($"{file}", "Длина четвертой стены: " + WallLength4 + "\n");
+            }
+
+
+
             double SRoom = (WallDouble1 * HeightWall) + (WallDouble2 * HeightWall) + (WallDouble3 * HeightWall) + (WallDouble4 * HeightWall);
             double Windows = NumWindows * (WindowsDouble * HeightWindows);
             double Doors = NumDoors * (DoorsDouble * HeightDoors);
@@ -78,7 +92,7 @@ namespace MyRoom.Area
 
 
         }
-        
 
+        
     }
 }
