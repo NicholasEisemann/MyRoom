@@ -19,19 +19,16 @@ namespace MyRoom
             // Основной код русской программы
             Console.WriteLine("Какую площадь вы хотите высчитать?");
             Functional();
+            Console.WriteLine();
             string imput = Console.ReadLine();
             if (imput == "Площадь комнаты")
             {
                 theWallArea.Area();
             }
-            else if (imput == "Площадь пола")
+            else if (imput == "Площадь пола/потолка")
             {
                 theFloorAndCeiling.FloorAndCeiling();
             }
-            else if (imput == "Площадь потолка")
-            {
-                theFloorAndCeiling.FloorAndCeiling();
-            }    
             else
             {
                 Console.WriteLine("Error");
@@ -44,8 +41,7 @@ namespace MyRoom
             {
                 Console.WriteLine();
                 Console.WriteLine("Я могу:");
-                Console.WriteLine("Измерить площадь пола - Площадь пола");
-                Console.WriteLine("Измерить площадь потолка - Площадь потолка");
+                Console.WriteLine("Измерить площадь пола/потолка - Площадь пола/потолка");
                 Console.WriteLine("Измерить площадь комнаты - Площадь комнаты");
             }
 

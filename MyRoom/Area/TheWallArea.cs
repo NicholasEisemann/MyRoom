@@ -10,6 +10,8 @@ namespace MyRoom.Area
 
         public void Area()
         {
+            Console.WriteLine("Введите наименование комнаты:");
+            string room = Console.ReadLine();
             Console.WriteLine("Укажите размер комнаты");
 
             double WallDouble1;
@@ -68,17 +70,7 @@ namespace MyRoom.Area
             double HeightDoors = Convert.ToDouble(HeightDoor);
 
 
-            string file = @"C:\Users\Seven\OneDrive\Рабочий стол\C#_Project\MyRoom\File\ConfWall.txt";
-
-            if (File.Exists(file)) //Проверка наличие файла
-            {
-                File.AppendAllText($"{file}", "Высота: " + Height + "\n");
-                File.AppendAllText($"{file}", "Длина первой стены: " + WallLength1 + "\n");
-                File.AppendAllText($"{file}", "Длина второй стены: " + WallLength2 + "\n");
-                File.AppendAllText($"{file}", "Длина третьей стены: " + WallLength3 + "\n");
-                File.AppendAllText($"{file}", "Длина четвертой стены: " + WallLength4 + "\n");
-            }
-
+            string PathFile = @"C:\Users\Seven\OneDrive\Рабочий стол\C#_Project\MyRoom\File\HistorWalls\HistorWalls.txt";
 
 
             double SRoom = (WallDouble1 * HeightWall) + (WallDouble2 * HeightWall) + (WallDouble3 * HeightWall) + (WallDouble4 * HeightWall);
@@ -88,7 +80,46 @@ namespace MyRoom.Area
             SRoomWD = (double)Math.Round(SRoomWD, 2);
 
 
-            Console.WriteLine($"Это площадь вашей квартиры - {SRoomWD} m^2");
+            Console.WriteLine($"Это площадь вашей квартиры - {SRoomWD} m^2" + "\n");
+
+            Console.WriteLine("Желаете ли вы сохранить данные в отдельный документ?  y/n");
+            String AddSave = Console.ReadLine();
+            Console.WriteLine("Введите имя файла:");
+            String NameFile = Console.ReadLine();
+            string AddPathFile = @$"C:\Users\Seven\OneDrive\Рабочий стол\C#_Project\MyRoom\File\HistorWalls\{NameFile}.txt";
+
+            if (AddSave == "y")
+            {
+                File.Create(AddPathFile).Close();
+                File.AppendAllText($"{AddPathFile}", room + "\n");
+                File.AppendAllText($"{AddPathFile}", "Высота: " + Height + "\n");
+                File.AppendAllText($"{AddPathFile}", "Длина первой стены: " + WallLength1 + "\n");
+                File.AppendAllText($"{AddPathFile}", "Длина второй стены: " + WallLength2 + "\n");
+                File.AppendAllText($"{AddPathFile}", "Длина третьей стены: " + WallLength3 + "\n");
+                File.AppendAllText($"{AddPathFile}", "Длина четвертой стены: " + WallLength4 + "\n");
+                File.AppendAllText($"{AddPathFile}", $"Это площадь вашей квартиры - {SRoomWD} m^2" + "\n" + "\n");
+                Console.WriteLine("Сохранение успешно созданно!");
+            }
+            else
+            {
+                Console.WriteLine("Хорошо");
+            }
+
+            //сохранение последней работы в историю
+
+            if (File.Exists(PathFile)) //Проверка наличие файла
+            {
+                File.AppendAllText($"{PathFile}", room + "\n");
+                File.AppendAllText($"{PathFile}", "Высота: " + Height + "\n");
+                File.AppendAllText($"{PathFile}", "Длина первой стены: " + WallLength1 + "\n");
+                File.AppendAllText($"{PathFile}", "Длина второй стены: " + WallLength2 + "\n");
+                File.AppendAllText($"{PathFile}", "Длина третьей стены: " + WallLength3 + "\n");
+                File.AppendAllText($"{PathFile}", "Длина четвертой стены: " + WallLength4 + "\n");
+                File.AppendAllText($"{PathFile}", $"Это площадь вашей квартиры - {SRoomWD} m^2" + "\n" + "\n");
+            }
+
+
+            Console.ReadKey();
 
 
         }
