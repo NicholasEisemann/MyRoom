@@ -1,5 +1,5 @@
 ﻿using System;
-using MyRoom.Area; 
+using MyRoom.Area;
 
 namespace MyRoom
 {
@@ -7,56 +7,34 @@ namespace MyRoom
     {
         static void Main(string[] args)
         {
-            TheWallArea theWallArea = new TheWallArea();
-            TheFloorAndCeiling theFloorAndCeiling = new TheFloorAndCeiling();
-            //Rolls rolls = new Rolls();
+            MyMenu myClass = new MyMenu();
 
-
-            void menu()
-            {
-                Console.WriteLine("Какую площадь вы хотите высчитать?");
-                Functional();
-                Console.WriteLine();
-                string imput = Console.ReadLine();
-                if (imput == "Площадь комнаты")
-                {
-                    theWallArea.Area();
-                }
-                else if (imput == "Площадь пола/потолка")
-                {
-                    theFloorAndCeiling.FloorAndCeiling();
-                }
-                else
-                {
-                    Console.WriteLine("Error");
-                }
-
-            }
-
-            // Основной функции программы
-            void Functional()
-            {
-                Console.WriteLine();
-                Console.WriteLine("Я могу:");
-                Console.WriteLine("Измерить площадь пола/потолка - Площадь пола/потолка");
-                Console.WriteLine("Измерить площадь комнаты - Площадь комнаты");
-            }
-
-            menu();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Главное Меню");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("Я могу:");
+            Console.WriteLine("Измерить площадь пола/потолка - Площадь пола/потолка");
+            Console.WriteLine("Измерить площадь стен - Площадь Стен");
+            Console.WriteLine();
+            myClass.Menu();
 
         }
 
-        TheWallArea theWallArea = new TheWallArea();
-        TheFloorAndCeiling theFloorAndCeiling = new TheFloorAndCeiling();
-        //Rolls rolls = new Rolls();
+    }
 
+    public class MyMenu
+    {
         public void Menu()
         {
+            TheWallArea theWallArea = new TheWallArea();
+            TheFloorAndCeiling theFloorAndCeiling = new TheFloorAndCeiling();
+
+            Console.BackgroundColor = ConsoleColor.Blue;
             Console.WriteLine("Какую площадь вы хотите высчитать?");
-            Functional();
+            Console.BackgroundColor = ConsoleColor.Black;
             Console.WriteLine();
             string imput = Console.ReadLine();
-            if (imput == "Площадь комнаты")
+            if (imput == "Площадь Стен")
             {
                 theWallArea.Area();
             }
@@ -69,18 +47,8 @@ namespace MyRoom
                 Console.WriteLine("Error");
             }
 
-
-            // Основной функции программы
-            void Functional()
-            {
-                Console.WriteLine();
-                Console.WriteLine("Я могу:");
-                Console.WriteLine("Измерить площадь пола/потолка - Площадь пола/потолка");
-                Console.WriteLine("Измерить площадь комнаты - Площадь комнаты");
-            }
-
-            Menu();
-
         }
 
-    }   }
+    }
+}
+

@@ -10,7 +10,7 @@ namespace MyRoom.Area
     {
         public void FloorAndCeiling()
         {
-            Program program = new Program();
+            MyMenu program = new MyMenu();
 
 
             Console.WriteLine("Введите наименование комнаты:");
@@ -40,7 +40,9 @@ namespace MyRoom.Area
 
             void Save()
             {
+                Console.BackgroundColor = ConsoleColor.Red;
                 Console.WriteLine("Желаете ли вы сохранить данные в отдельный документ?  y/n");
+                Console.BackgroundColor = ConsoleColor.Black;
                 String AddSave = Console.ReadLine();
 
                 if (AddSave == "y")
@@ -53,7 +55,9 @@ namespace MyRoom.Area
                     File.AppendAllText($"{AddPathFile}", "Длина: " + Length + "\n");
                     File.AppendAllText($"{AddPathFile}", "Ширина: " + Width + "\n");
                     File.AppendAllText($"{AddPathFile}", $"Площадь пола/потолка: {SLAW} m^2" + "\n" + "\n");
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Сохранение успешно созданно!");
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine();
                     program.Menu();
                 }
@@ -72,7 +76,7 @@ namespace MyRoom.Area
 
             Save();
             program.Menu();
-
+            
         }
 
     }

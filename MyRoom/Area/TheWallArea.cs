@@ -11,12 +11,12 @@ namespace MyRoom.Area
 
         public void Area()
         {
-            Program program = new Program();
-
+            MyMenu program = new MyMenu();
+            
 
             Console.WriteLine("Введите наименование комнаты:");
             string room = Console.ReadLine();
-            Console.WriteLine("Укажите размер комнаты");
+            Console.WriteLine("Укажите размер стен");
 
             double WallDouble1;
             double WallDouble2;
@@ -66,7 +66,7 @@ namespace MyRoom.Area
             Console.WriteLine("Колличество Дверей:");
             string NumDoor = Console.ReadLine();
             double NumDoors = Convert.ToDouble(NumDoor);
-            Console.WriteLine("Длина:");
+            Console.WriteLine("Ширина:");
             string DoorsLength = Console.ReadLine();
             double DoorsDouble = Convert.ToDouble(DoorsLength);
             Console.WriteLine("Высота:");
@@ -84,7 +84,7 @@ namespace MyRoom.Area
             SRoomWD = (double)Math.Round(SRoomWD, 2);
 
 
-            Console.WriteLine($"Это площадь вашей квартиры - {SRoomWD} m^2" + "\n");
+            Console.WriteLine($"Это площадь выших стен - {SRoomWD} m^2" + "\n");
 
 
             //сохранение последней работы в историю
@@ -97,12 +97,14 @@ namespace MyRoom.Area
                 File.AppendAllText($"{PathFile}", "Длина второй стены: " + WallLength2 + "\n");
                 File.AppendAllText($"{PathFile}", "Длина третьей стены: " + WallLength3 + "\n");
                 File.AppendAllText($"{PathFile}", "Длина четвертой стены: " + WallLength4 + "\n");
-                File.AppendAllText($"{PathFile}", $"Это площадь вашей квартиры - {SRoomWD} m^2" + "\n" + "\n");
+                File.AppendAllText($"{PathFile}", $"Это площадь ваших стен - {SRoomWD} m^2" + "\n" + "\n");
             }
 
             void Save()
             {
+                Console.BackgroundColor = ConsoleColor.Red;
                 Console.WriteLine("Желаете ли вы сохранить данные в отдельный документ?  y/n");
+                Console.BackgroundColor = ConsoleColor.Black;
                 String AddSave = Console.ReadLine();
                 if (AddSave == "y")
                 {
@@ -116,8 +118,16 @@ namespace MyRoom.Area
                     File.AppendAllText($"{AddPathFile}", "Длина второй стены: " + WallLength2 + "\n");
                     File.AppendAllText($"{AddPathFile}", "Длина третьей стены: " + WallLength3 + "\n");
                     File.AppendAllText($"{AddPathFile}", "Длина четвертой стены: " + WallLength4 + "\n");
-                    File.AppendAllText($"{AddPathFile}", $"Это площадь вашей квартиры - {SRoomWD} m^2" + "\n" + "\n");
+                    File.AppendAllText($"{AddPathFile}", "Колличество Окон: " + NumWindows + "\n");
+                    File.AppendAllText($"{AddPathFile}", "Длина Окна: " + WindowsDouble + "\n");
+                    File.AppendAllText($"{AddPathFile}", "Ширина Окна: " + HeightWindows + "\n");
+                    File.AppendAllText($"{AddPathFile}", "Колличество Дверей: " + NumDoors + "\n");
+                    File.AppendAllText($"{AddPathFile}", "Ширина Двери: " + DoorsDouble + "\n");
+                    File.AppendAllText($"{AddPathFile}", "Высота Двери: " + HeightDoors + "\n");
+                    File.AppendAllText($"{AddPathFile}", $"Это площадь ваших стен - {SRoomWD} m^2" + "\n" + "\n");
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Сохранение успешно созданно!");
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine();
                     program.Menu();
                 }
